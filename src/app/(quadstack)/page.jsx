@@ -1,3 +1,4 @@
+import Hero from "@/components/client/Hero";
 import { Navbar } from "@/components/client/Navbar";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       >
         <div>
           <Navbar />
+          <Hero />
         </div>
       </div>
     </>
