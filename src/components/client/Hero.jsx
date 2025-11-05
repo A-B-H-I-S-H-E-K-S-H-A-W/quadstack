@@ -11,8 +11,8 @@ const Hero = () => {
             <span className="text-pink-400">stack</span>
           </h2>
           <p className="text-base mt-4 text-background/50">
-            Snipptech offers full-spectrum digital services including SEO, apps,
-            ads, AI, and automation.
+            Quadstack offers digital services including SEO, web apps, e-commerce website, and
+            automation.
           </p>
           <div className="mt-6">
             <Button variant={"outline"} size={"lg"} className={"rounded-3xl"}>
