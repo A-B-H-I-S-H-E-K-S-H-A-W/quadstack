@@ -10,8 +10,8 @@ export function Navbar({ className }) {
         <h2 className="text-3xl font-bold text-background">Quadstack</h2>
       </div>
       <div className={cn("max-w-lg", className)}>
-        <div className="relative rounded-full border border-transparent dark:bg-background dark:border-foreground bg-linear-to-r from-foreground to-foreground shadow-input px-8 py-3">
-          <ul className="flex justify-center space-x-8 text-background">
+        <div className="relative rounded-full border border-transparent dark:bg-background dark:border-foreground bg-linear-to-r from-foreground to-foreground shadow-input px-8 py-4">
+          <ul className="flex justify-center space-x-10 text-background">
             <li>Services</li>
             <li>Products</li>
             <li>Pricing</li>

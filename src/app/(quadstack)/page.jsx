@@ -1,4 +1,5 @@
 import Hero from "@/components/client/Hero";
+import Logo from "@/components/client/Logo";
 import { Navbar } from "@/components/client/Navbar";
 import { ScrollText } from "@/components/client/ScrollText";
 
@@ -13,6 +14,7 @@ export default function Home() {
           <Navbar />
           <Hero />
           <ScrollText />
+          <Logo />
         </div>
       </div>
     </>
