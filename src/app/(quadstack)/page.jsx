@@ -7,10 +7,14 @@ export default function Home() {
   return (
     <>
       <div
+        className="relative min-h-[300vh] w-full bg-no-repeat bg-cover overflow-hidden"
         style={{ backgroundImage: "url('/bg.jpg')" }}
-        className="min-h-[300vh] w-full bg-no-repeat bg-cover overflow-hidden"
       >
-        <div>
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/20 z-0"></div>
+
+        {/* Content */}
+        <div className="relative z-10">
           <Navbar />
           <Hero />
           <ScrollText />
