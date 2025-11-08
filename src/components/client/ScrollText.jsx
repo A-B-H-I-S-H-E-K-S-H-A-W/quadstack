@@ -18,8 +18,8 @@ export function ScrollText() {
         </ScrollVelocityRow>
       </ScrollVelocityContainer>
       <div className="absolute top-5 flex items-center justify-center min-w-[120vw]">
-        <div className="pointer-events-none absolute z-20 inset-y-0 left-0 h-20 min-w-[110vw] bg-violet-500 rotate-3" />
-        <div className="pointer-events-none relative z-10 h-20 w-[110vw] bg-violet-400" />
+        <div className="pointer-events-none absolute z-20 inset-y-0 left-0 h-20 min-w-[110vw] bg-quad-violet rotate-3" />
+        <div className="pointer-events-none relative z-10 h-20 w-[110vw] bg-neon-lilac" />
       </div>
     </section>
   );

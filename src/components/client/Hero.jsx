@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="min-h-[90vh] flex items-center justify-center px-4 md:px-20">
       <div className="">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="z-10 flex py-10 items-center justify-center">
             <div
               className={cn(
@@ -19,8 +19,8 @@ const Hero = () => {
             </div>
           </div>
           <h2 className="md:text-7xl sm:text-5xl text-4xl font-semibold text-background">
-            Radically better observability{" "}
-            <span className="text-violet-400">stack</span>
+            Building Digital Experiences that{" "}
+            <span className="text-quad-violet">Perform.</span>
           </h2>
           <p className="max-w-lg mx-auto text-base mt-4 text-background/50">
             Quadstack offers digital services including SEO, web apps,

@@ -38,6 +38,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --color-quad-violet: var(--quad-violet);
+  --color-neon-lilac: var(--neon-lilac);
+  --color-midnight-indigo: var(--midnight-indigo);
+  --color-cosmic-blue: var(--cosmic-blue);
+  --color-deep-space: var(--deep-space);
+  --color-quad-black: var(--quad-black);
 }
 :root {
   --radius: 0.625rem;
@@ -72,6 +79,13 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.9 0.01 270);
   --sidebar-ring: oklch(0.65 0.02 270);
+
+  --quad-violet: rgb(142, 81, 255);
+  --quad-black: rgb(6, 6, 6);
+  --midnight-indigo: rgb(26, 30, 59);
+  --cosmic-blue: rgb(37, 42, 88);
+  --deep-space: rgb(16, 18, 32);
+  --neon-lilac: rgb(166, 132, 255);
 }
 .dark {
   --background: oklch(0.17 0.02 270);
@@ -105,6 +119,13 @@
   --sidebar-accent-foreground: oklch(0.97 0 0);
   --sidebar-border: oklch(0.35 0.02 270);
   --sidebar-ring: oklch(0.55 0.03 270);
+
+  --quad-violet: rgb(166, 132, 255);
+  --quad-black: rgb(0, 0, 0);
+  --midnight-indigo: rgb(20, 22, 45);
+  --cosmic-blue: rgb(30, 34, 70);
+  --deep-space: rgb(10, 12, 24);
+  --neon-lilac: rgb(186, 156, 255);
 }
 @layer base {
   * {
