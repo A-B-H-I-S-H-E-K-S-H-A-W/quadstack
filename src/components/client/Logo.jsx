@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Logo() {
   return (
-    <section className="md:pt-54 pt-40 pb-20 text-background">
+    <section className="py-20 text-background">
       <div className="mx-auto max-w-5xl px-6 text-center">
         <h2 className="md:text-4xl text-3xl font-semibold">
           Built with trusted industry tools

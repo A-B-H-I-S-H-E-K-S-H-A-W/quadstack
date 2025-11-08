@@ -14,7 +14,7 @@ const Hero = () => {
               )}
             >
               <div className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-background/60 hover:duration-300">
-                <span className="text-sm">Powered by QuadStack</span>
+                <span className="text-sm">Powered by Quadstack</span>
               </div>
             </div>
           </div>
