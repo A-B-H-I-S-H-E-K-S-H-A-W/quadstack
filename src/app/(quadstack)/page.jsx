@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div className="bg-quad-black">
         <div
-          className="relative min-h-[300vh] w-full bg-no-repeat bg-cover overflow-hidden"
+          className="relative min-h-[300vh] max-w-screen bg-no-repeat bg-cover overflow-hidden"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           {/* Dark overlay */}
@@ -35,7 +35,7 @@ export default function Home() {
           <Testimonials />
         </div>
         <div
-          className="relative w-full bg-no-repeat bg-cover overflow-hidden"
+          className="relative max-w-screen bg-no-repeat bg-cover overflow-hidden"
           style={{ backgroundImage: "url('/bg.jpg')" }}
         >
           {/* Dark overlay */}
