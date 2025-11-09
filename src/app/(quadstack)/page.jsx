@@ -3,6 +3,7 @@ import Logo from "@/components/client/Logo";
 import { Navbar } from "@/components/client/Navbar";
 import Projects from "@/components/client/Projects";
 import { ScrollText } from "@/components/client/ScrollText";
+import Services from "@/components/client/Services";
 
 export default function Home() {
   return (
@@ -19,8 +20,9 @@ export default function Home() {
           <Navbar />
           <Hero />
           <ScrollText />
-          <Projects />
+          {/* <Projects /> */}
           <Logo />
+          <Services />
         </div>
       </div>
     </>
