@@ -21,7 +21,7 @@ const CustomCard = ({ className, data }) => {
   return (
     <Card
       className={cn(
-        "max-w-2xl bg-linear-to-br from-cosmic-blue to-quad-black text-background border border-cosmic-blue shadow-xl rounded-2xl transition-all hover:shadow-quad-violet/40 md:px-5 md:py-8",
+        "max-w-2xl bg-linear-to-br from-cosmic-blue to-quad-black text-background border border-quad-black shadow-xl rounded-2xl transition-all hover:shadow-quad-black md:px-5 md:py-8",
         className
       )}
     >
