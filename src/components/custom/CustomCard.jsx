@@ -9,34 +9,53 @@ import {
 } from "../ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
-const CustomCard = ({ className, title, description }) => {
+const IconRenderer = ({ icon: IconComp, className }) => {
+  if (!IconComp) return null;
+  return (
+    <IconComp className={cn("md:size-6 size-5 ml-2 inline-block", className)} />
+  );
+};
+
+const CustomCard = ({ className, data }) => {
   return (
     <Card
       className={cn(
-        "max-w-2xl bg-linear-to-br from-deep-space to-quad-black text-background border border-deep-space shadow-xl rounded-2xl transition-all hover:shadow-quad-violet/40",
+        "max-w-2xl bg-linear-to-br from-cosmic-blue to-quad-black text-background border border-cosmic-blue shadow-xl rounded-2xl transition-all hover:shadow-quad-violet/40 md:px-5 md:py-8",
         className
       )}
     >
       <CardHeader>
-        <CardTitle className="text-neon-lilac text-xl font-semibold">
-          {title || "Title"}
+        <CardTitle className="text-neon-lilac md:text-4xl text-2xl font-semibold">
+          {data?.title || "Title"}
         </CardTitle>
-        <CardDescription className="text-muted-foreground text-sm">
-          {description || "Description"}
+        <CardDescription className="text-muted-foreground md:text-xl text-base mt-4">
+          {data?.description || "Description"}
         </CardDescription>
       </CardHeader>
 
-      <CardContent>
+      {/* <CardContent>
         <p className="text-sm text-muted-foreground">
           We build digital experiences that blend design and performance.
         </p>
-      </CardContent>
+      </CardContent> */}
 
       <CardFooter>
-        <Button className="bg-quad-violet hover:bg-neon-lilac text-background transition-colors">
-          Book 15 Min Call
-        </Button>
+        {data?.isButton && (
+          <Button
+            asChild
+            size={"lg"}
+            className={cn(
+              "bg-quad-violet hover:bg-neon-lilac text-background transition-colors",
+              data.buttonClassName
+            )}
+          >
+            <Link href={data?.link}>
+              {data?.buttonTitle} <IconRenderer icon={data?.icon} />
+            </Link>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );
