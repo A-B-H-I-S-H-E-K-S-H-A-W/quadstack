@@ -4,7 +4,6 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
   CardFooter,
 } from "../ui/card";
 import { cn } from "@/lib/utils";
@@ -27,10 +26,10 @@ const CustomCard = ({ className, data }) => {
       )}
     >
       <CardHeader>
-        <CardTitle className="text-neon-lilac md:text-4xl text-2xl font-semibold">
+        <CardTitle className="text-background md:text-3xl text-xl font-semibold">
           {data?.title || "Title"}
         </CardTitle>
-        <CardDescription className="text-muted-foreground md:text-xl text-base mt-4">
+        <CardDescription className="text-muted-foreground md:text-lg text-base mt-4">
           {data?.description || "Description"}
         </CardDescription>
       </CardHeader>
