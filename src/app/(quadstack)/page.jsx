@@ -6,6 +6,7 @@ import { ScrollText } from "@/components/client/ScrollText";
 import About from "@/components/client/About";
 import Services from "@/components/client/Services";
 import Testimonials from "@/components/client/Testimonials";
+import FAQ from "@/components/client/FAQ";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10">
-            Hello
+            <FAQ title="Any Questions?" />
           </div>
         </div>
       </div>
