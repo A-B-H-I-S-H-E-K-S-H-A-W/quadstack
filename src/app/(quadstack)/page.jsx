@@ -5,26 +5,32 @@ import { Navbar } from "@/components/client/Navbar";
 import { ScrollText } from "@/components/client/ScrollText";
 import About from "@/components/client/About";
 import Services from "@/components/client/Services";
+import Testimonials from "@/components/client/Testimonials";
 
 export default function Home() {
   return (
     <>
-      <div
-        className="relative min-h-[300vh] w-full bg-no-repeat bg-cover overflow-hidden"
-        style={{ backgroundImage: "url('/bg.jpg')" }}
-      >
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-foreground/50 z-0"></div>
+      <div className="bg-quad-black">
+        <div
+          className="relative min-h-[300vh] w-full bg-no-repeat bg-cover overflow-hidden"
+          style={{ backgroundImage: "url('/bg.jpg')" }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-foreground/50 z-0"></div>
 
-        {/* Content */}
-        <div className="relative z-10">
-          <Navbar />
-          <Hero />
-          <ScrollText />
-          {/* <Projects /> */}
-          <Logo />
-          <About />
-          <Services />
+          {/* Content */}
+          <div className="relative z-10">
+            <Navbar />
+            <Hero />
+            <ScrollText />
+            {/* <Projects /> */}
+            <Logo />
+            <About />
+            <Services />
+          </div>
+        </div>
+        <div>
+          <Testimonials />
         </div>
       </div>
     </>
