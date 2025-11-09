@@ -7,6 +7,7 @@ import About from "@/components/client/About";
 import Services from "@/components/client/Services";
 import Testimonials from "@/components/client/Testimonials";
 import FAQ from "@/components/client/FAQ";
+import Footer from "@/components/client/Footer";
 
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
           <div className="relative z-10">
             <FAQ title="Any Questions?" />
           </div>
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     </>
