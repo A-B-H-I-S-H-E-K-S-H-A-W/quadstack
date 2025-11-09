@@ -42,7 +42,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-foreground/50 z-0"></div>
 
           {/* Content */}
-          <div className="relative z-10">
+          <div className="relative z-0">
             <FAQ title="Any Questions?" />
           </div>
         </div>
