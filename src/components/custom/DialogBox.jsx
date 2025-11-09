@@ -13,13 +13,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 
-export function DialogBox({
-  openButtonTitle,
-  sendButton,
-  contentHeading,
-  content,
-}) {
-  const [email, setEmail] = useState("");
+export function DialogBox({ openButtonTitle, sendButton }) {
+  const [formData, setformData] = useState({
+    name: "",
+    email: "",
+    topic: "",
+  });
   return (
     <Dialog>
       <form>
@@ -32,15 +31,18 @@ export function DialogBox({
           <DialogHeader>
             <DialogTitle>Contact Us</DialogTitle>
             <DialogDescription>
-              Enter email and click send to send this email body.
+              Enter details and click send to send this email body.
             </DialogDescription>
           </DialogHeader>
-          <div>
-            <DialogDescription>
-              {/* <span className="text-foreground">{contentHeading}</span>{" "} */}
-              {content}
-              <p>{email}</p>
-            </DialogDescription>
+          <div className="grid gap-4">
+            <div className="grid gap-3">
+              <Label htmlFor="email-1">Full Name</Label>
+              <Input
+                id="email-1"
+                name="email"
+                placeholder={"Enter your name"}
+              />
+            </div>
           </div>
           <div className="grid gap-4">
             <div className="grid gap-3">
@@ -49,10 +51,13 @@ export function DialogBox({
                 id="email-1"
                 name="email"
                 placeholder={"Enter your email"}
-                onChange={(e) => {
-                  setEmail(e.target.value);
-                }}
               />
+            </div>
+          </div>
+          <div className="grid gap-4">
+            <div className="grid gap-3">
+              <Label htmlFor="email-1">Discussion Topic</Label>
+              <Input id="email-1" name="email" placeholder={"Your topic"} />
             </div>
           </div>
           <DialogFooter>
