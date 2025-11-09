@@ -1,6 +1,7 @@
-// import { Logo } from "@/components/logo";
+"use client";
+
 import Link from "next/link";
-import { Button } from "../ui/button";
+import { DialogBox } from "../custom/DialogBox";
 
 const links = [
   {
@@ -27,7 +28,38 @@ export default function Footer() {
           </h3>
         </div>
         <div className="flex items-center justify-center">
-          <Button className={"rounded-full"}>Book 15 min call</Button>
+          <DialogBox
+            openButtonTitle={"Book a 15min call"}
+            sendButton={"Send Email"}
+            contentHeading={"Email Body:"}
+            content={
+              <div className="text-muted-foreground text-sm leading-relaxed space-y-3">
+                <div>
+                  <p>Dear Quadstack Technologies Team,</p>
+                </div>
+                <div>
+                  <p>
+                    I hope this message finds you well. I’m interested in
+                    discussing a potential collaboration and learning more about
+                    the services your team provides.
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    Could we schedule a Google Meet call at your earliest
+                    convenience to go over the details? Please let me know a
+                    time that works best for you, and I’ll adjust accordingly.
+                  </p>
+                </div>
+                <div>
+                  <p>Looking forward to your response.</p>
+                </div>
+                <div>
+                  <p>Best regards,</p>
+                </div>
+              </div>
+            }
+          />
         </div>
         <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
           {links.map((link, index) => (
