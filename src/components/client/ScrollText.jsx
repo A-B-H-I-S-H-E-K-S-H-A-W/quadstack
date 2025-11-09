@@ -7,7 +7,7 @@ import {
 
 export function ScrollText() {
   return (
-    <section className="relative flex w-[110vw] flex-col items-center justify-center">
+    <section className="relative flex w-[110vw] flex-col items-center justify-center pb-40">
       <ScrollVelocityContainer className="relative z-30 top-12 font-bold tracking-tight md:leading-[1.1] rotate-3">
         <ScrollVelocityRow
           className="md:text-3xl text-xl font-medium"
