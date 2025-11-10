@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
         <div className="flex items-center justify-center">
           <DialogBox
-            openButtonTitle={"Book a 15min call"}
+            openButtonTitle={"Connect with Quadstack"}
             sendButton={"Send Email"}
             contentHeading={"Email Body:"}
           />
