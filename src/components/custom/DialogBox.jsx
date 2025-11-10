@@ -21,7 +21,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
   });
   return (
     <Dialog>
-      <form>
+      <div>
         <DialogTrigger asChild>
           <Button className={"rounded-full"} variant="outline">
             {openButtonTitle || "Open Dialog"}
@@ -67,7 +67,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
             <Button type="submit">{sendButton || "Send"}</Button>
           </DialogFooter>
         </DialogContent>
-      </form>
+      </div>
     </Dialog>
   );
 }
