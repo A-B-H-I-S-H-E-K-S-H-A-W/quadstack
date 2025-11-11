@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendEmail } from "@/lib/sendEmail";
+import axios from "axios";
 
 export async function POST(req) {
   try {
@@ -22,13 +23,34 @@ export async function POST(req) {
       html,
     });
 
-    return NextResponse.json(
-      {
-        success: true,
-        message: result.message,
-      },
-      { status: 200 }
+    const googleFormData = {
+      name,
+      email: userEmail,
+      topic,
+    };
+
+    const googleResponse = await axios.post(
+      "https://script.google.com/macros/s/AKfycbwGl466tbhfpEY3i3Q2LXAOtLric0xL5WwdC1Ux_zCkE9QexYquk1J2TUAXNvpAd59T/exec",
+      googleFormData
     );
+
+    if (googleResponse.status == 200) {
+      return NextResponse.json(
+        {
+          success: true,
+          message: result.message,
+        },
+        { status: 200 }
+      );
+    } else {
+      return NextResponse.json(
+        {
+          success: true,
+          message: result.message || "Email sent, but not recorded!",
+        },
+        { status: 207 }
+      );
+    }
   } catch (error) {
     console.error("Error in /api/client route:", error);
 

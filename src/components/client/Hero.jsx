@@ -28,12 +28,7 @@ const Hero = () => {
             e-commerce website, and automation.
           </h1>
           <div className="mt-6">
-            <Button
-              aschild
-              variant={"outline"}
-              size={"lg"}
-              className={"rounded-3xl"}
-            >
+            <Button variant={"outline"} size={"lg"} className={"rounded-3xl"}>
               <Link href={"#about"}>Discover</Link>
             </Button>
           </div>
