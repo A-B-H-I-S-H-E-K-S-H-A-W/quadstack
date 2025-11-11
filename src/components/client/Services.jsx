@@ -18,9 +18,9 @@ export const servicesData = [
       "Our SEO strategies ensure your brand gets found. We optimize for visibility, performance, and search intent to drive organic traffic and sustainable growth.",
   },
   {
-    title: "E-Commerce Growth",
+    title: "E-Commerce Website",
     description:
-      "We help online stores grow — improving conversions, optimizing product experiences, and implementing data-driven marketing strategies to maximize ROI.",
+      "We build e-commerce websites on Shopify, Woo-commerce and custom that improves conversions, optimizing product experiences, and implementing data-driven marketing strategies to maximize ROI.",
   },
 ];
 
