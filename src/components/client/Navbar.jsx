@@ -13,7 +13,7 @@ export function Navbar({ className }) {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <header className="fixed z-50 inset-x-0 backdrop-blur-lg h-20">
+    <header className="fixed z-50 inset-x-0 backdrop-blur-lg md:h-20 h-12">
       <div className="relative top-3 flex justify-between items-center md:px-20 px-4">
         {/* Logo */}
         <div>
