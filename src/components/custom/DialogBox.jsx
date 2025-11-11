@@ -160,35 +160,46 @@ export function DialogBox({ openButtonTitle, sendButton }) {
           <RadioGroup
             onValueChange={(value) => handleChange("topic", value)}
             value={formData.topic}
-            className="grid md:grid-cols-3 gap-3"
+            className="grid md:grid-cols-3 grid-cols-2 gap-3"
           >
-            {["collaborate", "project-discussion", "hiring"].map((topic) => (
-              <Label
-                key={topic}
-                htmlFor={topic}
-                className={`cursor-pointer rounded-xl border-2 p-4 flex flex-col items-start justify-center transition hover:border-primary ${
-                  formData.topic === topic
-                    ? "border-primary bg-primary/10"
-                    : "border-foreground/20"
-                }`}
-              >
-                <RadioGroupItem value={topic} id={topic} className="sr-only" />
-                <span className="font-medium text-foreground capitalize">
-                  {topic === "collaborate"
-                    ? "Collaborate"
-                    : topic === "project-discussion"
-                    ? "Project Discussion"
-                    : "Hiring"}
-                </span>
-                <span className="text-xs text-muted-foreground mt-1">
-                  {topic === "collaborate"
-                    ? "Work together on a creative or technical project."
-                    : topic === "project-discussion"
-                    ? "Discuss your project details with our team."
-                    : "Looking for a role or position."}
-                </span>
-              </Label>
-            ))}
+            {["collaborate", "project-discussion", "hiring"].map(
+              (topic, index, arr) => (
+                <Label
+                  key={topic}
+                  htmlFor={topic}
+                  className={`cursor-pointer rounded-xl border-2 p-4 flex flex-col items-start justify-center transition hover:border-primary 
+        ${
+          formData.topic === topic
+            ? "border-primary bg-primary/10"
+            : "border-foreground/20"
+        }
+        ${
+          index === arr.length - 1 ? "col-span-2 md:col-span-1" : ""
+        }  // ✅ full width only on small screens
+      `}
+                >
+                  <RadioGroupItem
+                    value={topic}
+                    id={topic}
+                    className="sr-only"
+                  />
+                  <span className="font-medium text-foreground capitalize">
+                    {topic === "collaborate"
+                      ? "Collaborate"
+                      : topic === "project-discussion"
+                      ? "Project Discussion"
+                      : "Hiring"}
+                  </span>
+                  <span className="text-xs text-muted-foreground mt-1">
+                    {topic === "collaborate"
+                      ? "Work together on a creative or technical project."
+                      : topic === "project-discussion"
+                      ? "Discuss your project details with our team."
+                      : "Looking for a role or position."}
+                  </span>
+                </Label>
+              )
+            )}
           </RadioGroup>
           {errors.topic && (
             <p className="text-xs text-primary">{errors.topic}</p>
