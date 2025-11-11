@@ -26,7 +26,7 @@ export const servicesData = [
 
 const Services = () => {
   return (
-    <section className="pb-10 md:px-20 px-4">
+    <section id="services" className="pb-10 pt-20 md:px-20 px-4">
       <div className="text-center mx-auto text-background">
         <h2 className="md:text-4xl text-3xl font-semibold">Services</h2>
         <h3 className="text-background/60 mt-4">

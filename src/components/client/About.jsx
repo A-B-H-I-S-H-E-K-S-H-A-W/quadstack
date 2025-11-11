@@ -22,7 +22,7 @@ const statsData = [
 
 const About = () => {
   return (
-    <div className="md:px-20 px-4 md:pt-20 pt-10 md:pb-36 pb-5">
+    <div className="md:px-20 px-4 md:pt-20 pt-10 md:pb-20 pb-5">
       <div className="grid md:grid-cols-2 gap-5">
         <CustomCard data={data} />
         <section className={"relative py-16 px-6 md:px-12"}>

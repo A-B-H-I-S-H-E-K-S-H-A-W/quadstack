@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { ChevronDown, X } from "lucide-react";
 import { useState } from "react";
+import { DialogBox } from "../custom/DialogBox";
 
 export function Navbar({ className }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,27 +24,40 @@ export function Navbar({ className }) {
         <div className="relative rounded-full border border-transparent dark:bg-background dark:border-foreground bg-linear-to-r from-foreground to-foreground shadow-input px-8 py-4">
           <ul className="flex justify-center space-x-10 text-background">
             <li>
-              <Link href="/">Home</Link>
+              <Link
+                className="hover:text-neon-lilac transition-colors"
+                href="/"
+              >
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/#services">Services</Link>
+              <Link
+                className="hover:text-neon-lilac transition-colors"
+                href="#services"
+              >
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/#contact">Contact</Link>
+              <Link
+                className="hover:text-neon-lilac transition-colors"
+                href="/projects"
+              >
+                Projects
+              </Link>
             </li>
           </ul>
         </div>
       </div>
 
       {/* Buttons */}
-      <div className="flex items-center justify-between gap-2">
-        <Button
-          variant="outline"
-          size="lg"
-          className="rounded-3xl border-foreground text-foreground"
-        >
-          Connect
-        </Button>
+      <div className="flex items-center justify-end gap-2">
+        <DialogBox
+          openButtonTitle={"Connnect"}
+          sendButton={"Send Email"}
+          contentHeading={"Email Body:"}
+        />
         <Button
           onClick={toggleMenu}
           variant="outline"
@@ -71,18 +85,18 @@ export function Navbar({ className }) {
           Home
         </Link>
         <Link
-          href="/#services"
+          href="#services"
           onClick={toggleMenu}
           className="hover:text-neon-lilac transition-colors"
         >
           Services
         </Link>
         <Link
-          href="/#contact"
+          href="/projects"
           onClick={toggleMenu}
           className="hover:text-neon-lilac transition-colors"
         >
-          Contact
+          Projects
         </Link>
         <Button
           onClick={toggleMenu}
