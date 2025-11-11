@@ -7,8 +7,8 @@ const data = {
   description:
     "20+ Happy customers trust our expertise and increase their profits with our demand capture framework",
   isButton: true,
-  link: "/",
-  buttonTitle: "Book a 15min call",
+  link: "/projects",
+  buttonTitle: "View Projects",
   buttonClassName: "rounded-full md:text-lg md:px-5 px-3 md:h-12",
   icon: ArrowUpRight,
 };
@@ -22,7 +22,7 @@ const statsData = [
 
 const About = () => {
   return (
-    <div className="md:px-20 px-4 md:pt-20 pt-10 md:pb-20 pb-5">
+    <section id="about" className="md:px-20 px-4 md:pt-20 pt-10 md:pb-20 pb-5">
       <div className="grid md:grid-cols-2 gap-5">
         <CustomCard data={data} />
         <section className={"relative z-10 py-16 px-6 md:px-12"}>
@@ -41,7 +41,7 @@ const About = () => {
           <div className="absolute inset-0 bg-deep-space/30 z-0 md:bg-transparent pointer-events-none"></div>
         </section>
       </div>
-    </div>
+    </section>
   );
 };
 
