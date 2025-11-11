@@ -25,7 +25,7 @@ const About = () => {
     <div className="md:px-20 px-4 md:pt-20 pt-10 md:pb-20 pb-5">
       <div className="grid md:grid-cols-2 gap-5">
         <CustomCard data={data} />
-        <section className={"relative py-16 px-6 md:px-12"}>
+        <section className={"relative z-10 py-16 px-6 md:px-12"}>
           <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 text-center">
             {statsData.map((item, index) => (
               <div key={index} className="flex flex-col items-center">
@@ -38,7 +38,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="absolute inset-0 bg-[url('/textures/dark-fabric.webp')] opacity-[0.05] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-deep-space/30 z-0 md:bg-transparent pointer-events-none"></div>
         </section>
       </div>
     </div>

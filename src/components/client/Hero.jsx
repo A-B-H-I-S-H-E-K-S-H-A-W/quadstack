@@ -22,10 +22,10 @@ const Hero = () => {
             Building Digital Experiences that{" "}
             <span className="text-quad-violet">Perform.</span>
           </h2>
-          <p className="max-w-lg mx-auto text-base mt-4 text-background/50">
+          <h1 className="max-w-lg mx-auto text-base mt-4 text-background/50">
             Quadstack offers digital services including SEO, web apps,
             e-commerce website, and automation.
-          </p>
+          </h1>
           <div className="mt-6">
             <Button variant={"outline"} size={"lg"} className={"rounded-3xl"}>
               Discover
