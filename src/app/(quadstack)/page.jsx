@@ -2,14 +2,11 @@
 
 import Hero from "@/components/client/Hero";
 import Logo from "@/components/client/Logo";
-import { Navbar } from "@/components/client/Navbar";
-// import Projects from "@/components/client/Projects";
 import { ScrollText } from "@/components/client/ScrollText";
 import About from "@/components/client/About";
 import Services from "@/components/client/Services";
 import Testimonials from "@/components/client/Testimonials";
 import FAQ from "@/components/client/FAQ";
-import Footer from "@/components/client/Footer";
 
 export default function Home() {
   return (
@@ -24,10 +21,8 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative z-10">
-            <Navbar />
             <Hero />
             <ScrollText />
-            {/* <Projects /> */}
             <Logo />
             <About />
             <Services />
@@ -47,9 +42,6 @@ export default function Home() {
           <div className="relative z-0">
             <FAQ title="Any Questions?" />
           </div>
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     </>

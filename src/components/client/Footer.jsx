@@ -20,7 +20,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="py-16 md:py-32">
+    <footer className="py-16 md:py-32 bg-quad-black">
       <div className="space-y-8 mx-auto max-w-5xl px-6">
         <div className="text-center">
           <h3 className="text-6xl font-bold text-background">
