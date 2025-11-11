@@ -6,13 +6,38 @@ import {
 const IMAGES_ROW_A = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1749738456487-2af715ab65ea?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "E-commerce",
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872653/Screenshot_2025-11-11_201512_vx7mvm.png",
+    description: "SelfLancer | Freelancing Platform",
   },
   {
     id: 2,
-    src: "https://plus.unsplash.com/premium_photo-1720139288219-e20aa9c8895b?q=80&w=1810&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    description: "Booking Site",
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872653/Screenshot_2025-11-11_201229_zsynoq.png",
+    description: "WanderSphere | Travel Booking Site",
+  },
+  {
+    id: 3,
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872653/Screenshot_2025-11-11_201354_icvx5d.png",
+    description: "Ace Productions | Marketing Agency",
+  },
+  {
+    id: 4,
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872651/Screenshot_2025-11-11_201634_z82zpb.png",
+    description: "Quindle Store | Shopping Site",
+  },
+  {
+    id: 5,
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872649/Screenshot_2025-11-11_201044_j0x56z.png",
+    description: "Ace Productions | Marketing Agency(Updated)",
+  },
+  {
+    id: 6,
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872650/Screenshot_2025-11-11_201135_zyv2uy.png",
+    description: "Portfolio Website",
+  },
+  {
+    id: 7,
+    src: "https://res.cloudinary.com/dkahnzsax/image/upload/v1762872649/Screenshot_2025-11-11_201607_aldxkp.png",
+    description: "Quadstack | Your reliable Partner",
   },
 ];
 
@@ -20,17 +45,33 @@ export function ScrollProjects() {
   return (
     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden pt-8">
       <ScrollVelocityContainer className="w-full">
-        <ScrollVelocityRow baseVelocity={6} direction={2} className="py-4">
+        <ScrollVelocityRow baseVelocity={2} direction={2} className="py-4">
           {IMAGES_ROW_A.map((item) => (
             <div className="text-center space-y-4" key={item.id}>
               <img
-                src={`${item.src}&ixlib=rb-4.0.3`}
-                alt="Unsplash sample"
-                width={440}
-                height={260}
+                src={`${item.src}`}
+                alt={item.description}
+                width={520}
+                height={300}
                 loading="lazy"
                 decoding="async"
-                className="mx-4 inline-block h-72 rounded-lg object-cover shadow-sm"
+                className="mx-4 inline-block rounded-lg object-cover shadow-sm"
+              />
+              <p>{item.description}</p>
+            </div>
+          ))}
+        </ScrollVelocityRow>
+        <ScrollVelocityRow baseVelocity={2} direction={-1} className="py-4">
+          {IMAGES_ROW_A.map((item) => (
+            <div className="text-center space-y-4" key={item.id}>
+              <img
+                src={`${item.src}`}
+                alt={item.description}
+                width={520}
+                height={300}
+                loading="lazy"
+                decoding="async"
+                className="mx-4 inline-block rounded-lg object-cover shadow-sm"
               />
               <p>{item.description}</p>
             </div>
