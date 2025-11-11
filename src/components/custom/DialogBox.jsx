@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Textarea } from "@/components/ui/textarea"; // ✅ Added for message field
 import { generateEmailHTML } from "@/data/email-topic";
 import { sendEmail } from "@/store/slice/client-slice";
 import { useState } from "react";
@@ -26,6 +27,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
     name: "",
     email: "",
     topic: "",
+    message: "",
   });
   const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
@@ -57,6 +59,12 @@ export function DialogBox({ openButtonTitle, sendButton }) {
       newErrors.topic = "Please select a discussion topic.";
     }
 
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required.";
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = "Message must be at least 10 characters long.";
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -77,6 +85,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
       userEmail: formData.email,
       name: formData.name,
       topic: formData.topic,
+      message: formData.message,
       html: htmlBody,
     };
 
@@ -87,7 +96,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
           description: result.message,
         });
       }
-      setFormData({ name: "", email: "", topic: "" });
+      setFormData({ name: "", email: "", topic: "", message: "" });
     } catch (err) {
       toast.error("Something went wrong!", {
         description: "Please try again later.",
@@ -103,11 +112,11 @@ export function DialogBox({ openButtonTitle, sendButton }) {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Contact Us</DialogTitle>
           <DialogDescription>
-            Enter details and click send to send email.
+            Enter details and click send to contact our team.
           </DialogDescription>
         </DialogHeader>
 
@@ -117,7 +126,6 @@ export function DialogBox({ openButtonTitle, sendButton }) {
             <Label htmlFor="name">Full Name</Label>
             <Input
               id="name"
-              name="name"
               placeholder="Enter your name"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
@@ -135,7 +143,6 @@ export function DialogBox({ openButtonTitle, sendButton }) {
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
-              name="email"
               placeholder="Enter your email"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
@@ -153,7 +160,7 @@ export function DialogBox({ openButtonTitle, sendButton }) {
           <RadioGroup
             onValueChange={(value) => handleChange("topic", value)}
             value={formData.topic}
-            className="grid grid-cols-1 gap-3"
+            className="grid md:grid-cols-3 gap-3"
           >
             {["collaborate", "project-discussion", "hiring"].map((topic) => (
               <Label
@@ -186,6 +193,25 @@ export function DialogBox({ openButtonTitle, sendButton }) {
           {errors.topic && (
             <p className="text-xs text-primary">{errors.topic}</p>
           )}
+        </div>
+
+        {/* ✅ Message Field */}
+        <div className="grid gap-4">
+          <div className="grid gap-3">
+            <Label htmlFor="message">Your Message</Label>
+            <Textarea
+              id="message"
+              placeholder="Write your message here..."
+              value={formData.message}
+              onChange={(e) => handleChange("message", e.target.value)}
+              className={`min-h-[100px] ${
+                errors.message ? "border-primary" : ""
+              }`}
+            />
+            {errors.message && (
+              <p className="text-xs text-primary">{errors.message}</p>
+            )}
+          </div>
         </div>
 
         {/* Footer */}

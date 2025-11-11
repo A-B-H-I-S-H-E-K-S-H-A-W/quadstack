@@ -5,7 +5,7 @@ import axios from "axios";
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { userEmail, name, topic, html, subject, text } = body;
+    const { userEmail, name, topic, html, subject, text, message } = body;
 
     if (!userEmail || !name || !html) {
       return NextResponse.json(
@@ -27,10 +27,11 @@ export async function POST(req) {
       name,
       email: userEmail,
       topic,
+      message,
     };
 
     const googleResponse = await axios.post(
-      "https://script.google.com/macros/s/AKfycbwGl466tbhfpEY3i3Q2LXAOtLric0xL5WwdC1Ux_zCkE9QexYquk1J2TUAXNvpAd59T/exec",
+      "https://script.google.com/macros/s/AKfycbymfiZ3hoghNN_I8m1terqtoIc7XU9H4oM_f1qir5heG4lpQdrjz74AQo80T_njT9bn/exec",
       googleFormData
     );
 
